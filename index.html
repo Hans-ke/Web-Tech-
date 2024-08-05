@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cronies Fashion Brand</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>Cronies Fashion Brand</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-links">
+                <a href="#" id="login-link">Login</a> | 
+                <a href="#" id="register-link">Register</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <h2>Search</h2>
+            <input type="text" placeholder="Search...">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="_about.html">Headwear</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Bottoms</a></li>
+            </ul>
+            <h2>Recent Posts</h2>
+            <ul>
+                <li><a href="#">Launching of Brand</a></li>
+                <li><a href="#">Celebrity Collaborations</a></li>
+                <li><a href="#">Charity Events</a></li>
+            </ul>
+        </aside>
+        <section class="content">
+            <article class="blog-post">
+                <h2>New Summer Collection 2024</h2>
+                <img src="Images/enVie72_90371501644139.jpg" alt="Summer Collection 2024">
+                <p>Discover the latest trends in our Summer Collection 2024...</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="blog-post">
+                <h2>Exclusive Interview with Designer</h2>
+                <img src="Images/fashion-boutique-forty-five-tenwebversion-8-1568408991.jpg" alt="Interview with our Designer">
+                <p>Get insights from our lead designer on the inspiration behind our latest line...</p>
+                <a href="#">Read More</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <h2>Follow Us</h2>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="sitemap">
+                <h2>Sitemap</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <p>&copy; 2024 Cronies Fashion Brand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Login -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-login">&times;</span>
+            <h2>Login</h2>
+            <form action="login.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Register -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-register">&times;</span>
+            <h2>Register</h2>
+            <form action="register.php" method="post">
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" name="new-username" required>
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get modal elements
+        var loginModal = document.getElementById("login-modal");
+        var registerModal = document.getElementById("register-modal");
+
+        // Get open modal buttons
+        var loginBtn = document.getElementById("login-link");
+        var registerBtn = document.getElementById("register-link");
+
+        // Get close buttons
+        var closeLoginBtn = document.getElementById("close-login");
+        var closeRegisterBtn = document.getElementById("close-register");
+
+        // Open login modal
+        loginBtn.onclick = function() {
+            loginModal.style.display = "block";
+        }
+
+        // Open register modal
+        registerBtn.onclick = function() {
+            registerModal.style.display = "block";
+        }
+
+        // Close modals
+        closeLoginBtn.onclick = function() {
+            loginModal.style.display = "none";
+        }
+
+        closeRegisterBtn.onclick = function() {
+            registerModal.style.display = "none";
+        }
+
+        // Close modal if user clicks outside of it
+        window.onclick = function(event) {
+            if (event.target == loginModal) {
+                loginModal.style.display = "none";
+           
